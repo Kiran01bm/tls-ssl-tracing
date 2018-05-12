@@ -1,0 +1,85 @@
+nmap -sV --reason -PN -n --top-ports 100 google.com.au
+
+Starting Nmap 7.40 ( https://nmap.org ) at 2018-05-13 00:58 AEST
+Nmap scan report for google.com.au (172.217.25.131)
+Host is up, received user-set (0.12s latency).
+Other addresses for google.com.au (not scanned): 2404:6800:4006:805::2003
+Not shown: 98 filtered ports
+Reason: 98 no-responses
+PORT    STATE SERVICE   REASON  VERSION
+80/tcp  open  http      syn-ack gws
+443/tcp open  ssl/https syn-ack gws
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.40%I=7%D=5/13%Time=5AF7012F%P=x86_64-apple-darwin13.4.0%
+SF:r(GetRequest,3764,"HTTP/1\.0\x20200\x20OK\r\nDate:\x20Sat,\x2012\x20May
+SF:\x202018\x2014:58:55\x20GMT\r\nExpires:\x20-1\r\nCache-Control:\x20priv
+SF:ate,\x20max-age=0\r\nContent-Type:\x20text/html;\x20charset=ISO-8859-1\
+SF:r\nP3P:\x20CP=\"This\x20is\x20not\x20a\x20P3P\x20policy!\x20See\x20g\.c
+SF:o/p3phelp\x20for\x20more\x20info\.\"\r\nServer:\x20gws\r\nX-XSS-Protect
+SF:ion:\x201;\x20mode=block\r\nX-Frame-Options:\x20SAMEORIGIN\r\nSet-Cooki
+SF:e:\x201P_JAR=2018-05-12-14;\x20expires=Mon,\x2011-Jun-2018\x2014:58:55\
+SF:x20GMT;\x20path=/;\x20domain=\.google\.com\r\nSet-Cookie:\x20NID=130=V7
+SF:3LK2YtSYH9LY5pr7BVbQymn5gHlzwOnbR4SmPDzYm3N8pwHpja33mx8ImJYwkTpQmMpCFDG
+SF:OqSy3EL3G7D8mOgNr9CXIbItS9sDvNVNLwPXb1ewsKIP2q5IDvhRpIJ;\x20expires=Sun
+SF:,\x2011-Nov-2018\x2014:58:55\x20GMT;\x20path=/;\x20domain=\.google\.com
+SF:;\x20HttpOnly\r\nAccept-Ranges:\x20none\r\nVary:\x20Accept-Encoding\r\n
+SF:\r\n<!doctype\x20html><html\x20itemscope=\"\"\x20itemtype=\"http://sche
+SF:ma\.org/WebPage\"\x20lang=\"en-AU\"><head><meta\x20content=\"text/html;
+SF:\x20charset=UTF-8\"\x20http-equiv=\"Content-Type\"><meta\x20content=\"/
+SF:logos/doodles/2018/mothers-day-2018-6361329190305792-l\.png\"\x20it")%r
+SF:(HTTPOptions,71B,"HTTP/1\.0\x20405\x20Method\x20Not\x20Allowed\r\nAllow
+SF::\x20GET,\x20HEAD\r\nDate:\x20Sat,\x2012\x20May\x202018\x2014:58:55\x20
+SF:GMT\r\nContent-Type:\x20text/html;\x20charset=UTF-8\r\nServer:\x20gws\r
+SF:\nContent-Length:\x201592\r\nX-XSS-Protection:\x201;\x20mode=block\r\nX
+SF:-Frame-Options:\x20SAMEORIGIN\r\n\r\n<!DOCTYPE\x20html>\n<html\x20lang=
+SF:en>\n\x20\x20<meta\x20charset=utf-8>\n\x20\x20<meta\x20name=viewport\x2
+SF:0content=\"initial-scale=1,\x20minimum-scale=1,\x20width=device-width\"
+SF:>\n\x20\x20<title>Error\x20405\x20\(Method\x20Not\x20Allowed\)!!1</titl
+SF:e>\n\x20\x20<style>\n\x20\x20\x20\x20\*{margin:0;padding:0}html,code{fo
+SF:nt:15px/22px\x20arial,sans-serif}html{background:#fff;color:#222;paddin
+SF:g:15px}body{margin:7%\x20auto\x200;max-width:390px;min-height:180px;pad
+SF:ding:30px\x200\x2015px}\*\x20>\x20body{background:url\(//www\.google\.c
+SF:om/images/errors/robot\.png\)\x20100%\x205px\x20no-repeat;padding-right
+SF::205px}p{margin:11px\x200\x2022px;overflow:hidden}ins{color:#777;text-d
+SF:ecoration:none}a\x20img{border:0}@media\x20screen\x20and\x20\(max-width
+SF::772px\){body{background:none;margin-top:0;max-width:none;padding");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.40%T=SSL%I=7%D=5/13%Time=5AF70136%P=x86_64-apple-darwin
+SF:13.4.0%r(GetRequest,3642,"HTTP/1\.0\x20200\x20OK\r\nDate:\x20Sat,\x2012
+SF:\x20May\x202018\x2014:59:01\x20GMT\r\nExpires:\x20-1\r\nCache-Control:\
+SF:x20private,\x20max-age=0\r\nContent-Type:\x20text/html;\x20charset=ISO-
+SF:8859-1\r\nP3P:\x20CP=\"This\x20is\x20not\x20a\x20P3P\x20policy!\x20See\
+SF:x20g\.co/p3phelp\x20for\x20more\x20info\.\"\r\nServer:\x20gws\r\nX-XSS-
+SF:Protection:\x201;\x20mode=block\r\nX-Frame-Options:\x20SAMEORIGIN\r\nSe
+SF:t-Cookie:\x201P_JAR=2018-05-12-14;\x20expires=Mon,\x2011-Jun-2018\x2014
+SF::59:01\x20GMT;\x20path=/;\x20domain=\.google\.com\r\nSet-Cookie:\x20NID
+SF:=130=Y3J_ytchy3ipbNfz6gaFKmlhhiqdcb9DYhwti7gzaZbEjWKL9P7Mh466YMlm8OTwdK
+SF:vWNhXjig-32KoqLeIUARgeerxupGqpSKR7dIg8S7g_vs_LcR8gcSO_UniuxPCK;\x20expi
+SF:res=Sun,\x2011-Nov-2018\x2014:59:01\x20GMT;\x20path=/;\x20domain=\.goog
+SF:le\.com;\x20HttpOnly\r\nAlt-Svc:\x20hq=\":443\";\x20ma=2592000;\x20quic
+SF:=51303433;\x20quic=51303432;\x20quic=51303431;\x20quic=51303339;\x20qui
+SF:c=51303335,quic=\":443\";\x20ma=2592000;\x20v=\"43,42,41,39,35\"\r\nAcc
+SF:ept-Ranges:\x20none\r\nVary:\x20Accept-Encoding\r\n\r\n<!doctype\x20htm
+SF:l><html\x20itemscope=\"\"\x20itemtype=\"http://schema\.org/WebPage\"\x2
+SF:0lang=\"en-AU\">")%r(HTTPOptions,7B2,"HTTP/1\.0\x20405\x20Method\x20Not
+SF:\x20Allowed\r\nAllow:\x20GET,\x20HEAD\r\nDate:\x20Sat,\x2012\x20May\x20
+SF:2018\x2014:59:02\x20GMT\r\nContent-Type:\x20text/html;\x20charset=UTF-8
+SF:\r\nServer:\x20gws\r\nContent-Length:\x201592\r\nX-XSS-Protection:\x201
+SF:;\x20mode=block\r\nX-Frame-Options:\x20SAMEORIGIN\r\nAlt-Svc:\x20hq=\":
+SF:443\";\x20ma=2592000;\x20quic=51303433;\x20quic=51303432;\x20quic=51303
+SF:431;\x20quic=51303339;\x20quic=51303335,quic=\":443\";\x20ma=2592000;\x
+SF:20v=\"43,42,41,39,35\"\r\n\r\n<!DOCTYPE\x20html>\n<html\x20lang=en>\n\x
+SF:20\x20<meta\x20charset=utf-8>\n\x20\x20<meta\x20name=viewport\x20conten
+SF:t=\"initial-scale=1,\x20minimum-scale=1,\x20width=device-width\">\n\x20
+SF:\x20<title>Error\x20405\x20\(Method\x20Not\x20Allowed\)!!1</title>\n\x2
+SF:0\x20<style>\n\x20\x20\x20\x20\*{margin:0;padding:0}html,code{font:15px
+SF:/22px\x20arial,sans-serif}html{background:#fff;color:#222;padding:15px}
+SF:body{margin:7%\x20auto\x200;max-width:390px;min-height:180px;padding:30
+SF:px\x200\x2015px}\*\x20>\x20body{background:url\(//www\.google\.com/imag
+SF:es/errors/robot\.png\)\x20100%\x205px\x20no-repeat;padding-right:205px}
+SF:p{margin:11px\x200\x2022px;overflow");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 79.24 seconds
+ kiranya@Virus  ~/Documents/MLC 

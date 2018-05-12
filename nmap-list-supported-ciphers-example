@@ -1,0 +1,65 @@
+nmap --script ssl-cert,ssl-enum-ciphers -p 443 google.co.in
+
+Starting Nmap 7.40 ( https://nmap.org ) at 2018-05-13 00:57 AEST
+Nmap scan report for google.co.in (216.58.196.131)
+Host is up (0.083s latency).
+Other addresses for google.co.in (not scanned): 2404:6800:4006:804::2003
+rDNS record for 216.58.196.131: syd15s04-in-f3.1e100.net
+PORT    STATE SERVICE
+443/tcp open  https
+| ssl-cert: Subject: commonName=*.google.co.in/organizationName=Google LLC/stateOrProvinceName=California/countryName=US
+| Subject Alternative Name: DNS:*.google.co.in, DNS:*.google.in, DNS:google.co.in, DNS:google.in
+| Issuer: commonName=Google Internet Authority G3/organizationName=Google Trust Services/countryName=US
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2018-04-24T10:33:17
+| Not valid after:  2018-07-17T09:27:00
+| MD5:   d6c2 996a fded f43a 7ed9 f3ab ed27 8d55
+|_SHA-1: aef6 3c48 ec95 5f4b 9292 efb2 dcea c2ec ac1b 3b81
+| ssl-enum-ciphers:
+|   TLSv1.0:
+|     ciphers:
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|     compressors:
+|       NULL
+|     cipher preference: server
+|     warnings:
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|   TLSv1.1:
+|     ciphers:
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|     compressors:
+|       NULL
+|     cipher preference: server
+|     warnings:
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|   TLSv1.2:
+|     ciphers:
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256 (rsa 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|     compressors:
+|       NULL
+|     cipher preference: server
+|     warnings:
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|_  least strength: C
+
+Nmap done: 1 IP address (1 host up) scanned in 8.27 seconds
+ kiranya@Virus  ~/Documents/MLC 

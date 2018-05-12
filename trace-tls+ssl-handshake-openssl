@@ -1,0 +1,435 @@
+openssl s_client -showcerts -connect google.com:443 -debug -nbio -state -tls1
+
+CONNECTED(00000003)
+turning on non blocking io
+SSL_connect:before/connect initialization
+write to 0x7ffac9c026a0 [0x7ffaca00c000] (100 bytes => 100 (0x64))
+0000 - 16 03 01 00 5f 01 00 00-5b 03 01 5a f6 fd cd 9f   ...._...[..Z....
+0010 - 10 71 c9 e6 5f 2d 68 e3-8a d6 8a 9c d7 75 2b 9d   .q.._-h......u+.
+0020 - ec 29 74 60 26 49 95 8e-48 cf 2a 00 00 2e 00 39   .)t`&I..H.*....9
+0030 - 00 38 00 35 00 16 00 13-00 0a 00 33 00 32 00 2f   .8.5.......3.2./
+0040 - 00 9a 00 99 00 96 00 05-00 04 00 15 00 12 00 09   ................
+0050 - 00 14 00 11 00 08 00 06-00 03 00 ff 01 00 00 04   ................
+0060 - 00 23                                             .#
+0064 - <SPACES/NULS>
+SSL_connect:SSLv3 write client hello A
+read from 0x7ffac9c026a0 [0x7ffaca007600] (5 bytes => -1 (0xFFFFFFFFFFFFFFFF))
+SSL_connect:error in SSLv3 read server hello A
+write R BLOCK
+read from 0x7ffac9c026a0 [0x7ffaca007600] (5 bytes => 5 (0x5))
+0000 - 16 03 01 00 35                                    ....5
+read from 0x7ffac9c026a0 [0x7ffaca007605] (53 bytes => 53 (0x35))
+0000 - 02 00 00 31 03 01 5a f6-fd cd d3 de 4b 97 b2 88   ...1..Z.....K...
+0010 - 7d dc 31 e3 75 29 6e f3-4b 14 1b 13 cd 11 a1 ee   }.1.u)n.K.......
+0020 - c8 0b 13 45 7b d0 00 00-2f 00 00 09 ff 01 00 01   ...E{.../.......
+0030 - 00 00 23                                          ..#
+0035 - <SPACES/NULS>
+SSL_connect:SSLv3 read server hello A
+read from 0x7ffac9c026a0 [0x7ffaca007600] (5 bytes => 5 (0x5))
+0000 - 16 03 01 0c bb                                    .....
+read from 0x7ffac9c026a0 [0x7ffaca007605] (3259 bytes => 1355 (0x54B))
+0000 - 0b 00 0c b7 00 0c b4 00-08 4e 30 82 08 4a 30 82   .........N0..J0.
+0010 - 07 32 a0 03 02 01 02 02-08 0d a9 bc 2e 5a 1c b1   .2...........Z..
+0020 - 32 30 0d 06 09 2a 86 48-86 f7 0d 01 01 0b 05 00   20...*.H........
+0030 - 30 54 31 0b 30 09 06 03-55 04 06 13 02 55 53 31   0T1.0...U....US1
+0040 - 1e 30 1c 06 03 55 04 0a-13 15 47 6f 6f 67 6c 65   .0...U....Google
+0050 - 20 54 72 75 73 74 20 53-65 72 76 69 63 65 73 31    Trust Services1
+0060 - 25 30 23 06 03 55 04 03-13 1c 47 6f 6f 67 6c 65   %0#..U....Google
+0070 - 20 49 6e 74 65 72 6e 65-74 20 41 75 74 68 6f 72    Internet Author
+0080 - 69 74 79 20 47 33 30 1e-17 0d 31 38 30 34 32 34   ity G30...180424
+0090 - 31 30 30 34 35 39 5a 17-0d 31 38 30 37 31 37 30   100459Z..1807170
+00a0 - 39 32 36 30 30 5a 30 66-31 0b 30 09 06 03 55 04   92600Z0f1.0...U.
+00b0 - 06 13 02 55 53 31 13 30-11 06 03 55 04 08 0c 0a   ...US1.0...U....
+00c0 - 43 61 6c 69 66 6f 72 6e-69 61 31 16 30 14 06 03   California1.0...
+00d0 - 55 04 07 0c 0d 4d 6f 75-6e 74 61 69 6e 20 56 69   U....Mountain Vi
+00e0 - 65 77 31 13 30 11 06 03-55 04 0a 0c 0a 47 6f 6f   ew1.0...U....Goo
+00f0 - 67 6c 65 20 4c 4c 43 31-15 30 13 06 03 55 04 03   gle LLC1.0...U..
+0100 - 0c 0c 2a 2e 67 6f 6f 67-6c 65 2e 63 6f 6d 30 82   ..*.google.com0.
+0110 - 01 22 30 0d 06 09 2a 86-48 86 f7 0d 01 01 01 05   ."0...*.H.......
+0120 - 00 03 82 01 0f 00 30 82-01 0a 02 82 01 01 00 a5   ......0.........
+0130 - e1 e3 f1 11 06 37 e5 da-5f e4 49 46 aa 70 b6 4b   .....7.._.IF.p.K
+0140 - 39 7e 6b 02 8a 00 a0 98-75 93 f1 e8 e8 96 92 f7   9~k.....u.......
+0150 - 92 53 4d 76 1c 6d 28 de-62 6d 5a b7 a1 9b e8 95   .SMv.m(.bmZ.....
+0160 - 40 71 fa df 03 08 41 42-b7 18 34 2f 88 e1 b5 54   @q....AB..4/...T
+0170 - 89 64 fe 6a f4 7b b4 e0-12 3e a2 6e 28 47 24 b5   .d.j.{...>.n(G$.
+0180 - 6a 15 f2 c8 13 1e d4 d5-63 ef 14 b0 a2 bc 69 bb   j.......c.....i.
+0190 - 8b 7c 31 78 a0 c6 0e e6-f0 1c 56 2f 79 b1 84 68   .|1x......V/y..h
+01a0 - b9 49 a7 59 8b 4d 18 7c-a2 4c c2 6f cf f4 1e e7   .I.Y.M.|.L.o....
+01b0 - 42 40 ae a7 ba a0 9f 02-23 c3 2e ef 92 d2 54 a0   B@......#.....T.
+01c0 - 23 31 5b b5 5e a1 4c 91-05 ba 86 33 ff b2 f9 39   #1[.^.L....3...9
+01d0 - d8 16 11 5e d8 07 58 6e-c5 e4 ea e3 d9 cb 98 19   ...^..Xn........
+01e0 - 6d 1b f2 db 56 5d 06 33-b2 77 43 4c 40 29 4d 72   m...V].3.wCL@)Mr
+01f0 - 42 b3 00 99 b2 a3 23 7d-46 e3 dd a0 90 ab a0 75   B.....#}F......u
+0200 - cc 56 23 b7 ed a7 e3 c1-bb b1 8e 39 ff 6e 48 08   .V#........9.nH.
+0210 - d0 23 30 28 9a c7 d0 f4-94 a5 ba 7b cd 32 de 74   .#0(.......{.2.t
+0220 - 2c 44 94 fa 58 c2 21 92-80 01 4d b9 ca fa 9d 02   ,D..X.!...M.....
+0230 - 03 01 00 01 a3 82 05 0c-30 82 05 08 30 13 06 03   ........0...0...
+0240 - 55 1d 25 04 0c 30 0a 06-08 2b 06 01 05 05 07 03   U.%..0...+......
+0250 - 01 30 82 03 e1 06 03 55-1d 11 04 82 03 d8 30 82   .0.....U......0.
+0260 - 03 d4 82 0c 2a 2e 67 6f-6f 67 6c 65 2e 63 6f 6d   ....*.google.com
+0270 - 82 0d 2a 2e 61 6e 64 72-6f 69 64 2e 63 6f 6d 82   ..*.android.com.
+0280 - 16 2a 2e 61 70 70 65 6e-67 69 6e 65 2e 67 6f 6f   .*.appengine.goo
+0290 - 67 6c 65 2e 63 6f 6d 82-12 2a 2e 63 6c 6f 75 64   gle.com..*.cloud
+02a0 - 2e 67 6f 6f 67 6c 65 2e-63 6f 6d 82 14 2a 2e 64   .google.com..*.d
+02b0 - 62 38 33 33 39 35 33 2e-67 6f 6f 67 6c 65 2e 63   b833953.google.c
+02c0 - 6e 82 06 2a 2e 67 2e 63-6f 82 0e 2a 2e 67 63 70   n..*.g.co..*.gcp
+02d0 - 2e 67 76 74 32 2e 63 6f-6d 82 16 2a 2e 67 6f 6f   .gvt2.com..*.goo
+02e0 - 67 6c 65 2d 61 6e 61 6c-79 74 69 63 73 2e 63 6f   gle-analytics.co
+02f0 - 6d 82 0b 2a 2e 67 6f 6f-67 6c 65 2e 63 61 82 0b   m..*.google.ca..
+0300 - 2a 2e 67 6f 6f 67 6c 65-2e 63 6c 82 0e 2a 2e 67   *.google.cl..*.g
+0310 - 6f 6f 67 6c 65 2e 63 6f-2e 69 6e 82 0e 2a 2e 67   oogle.co.in..*.g
+0320 - 6f 6f 67 6c 65 2e 63 6f-2e 6a 70 82 0e 2a 2e 67   oogle.co.jp..*.g
+0330 - 6f 6f 67 6c 65 2e 63 6f-2e 75 6b 82 0f 2a 2e 67   oogle.co.uk..*.g
+0340 - 6f 6f 67 6c 65 2e 63 6f-6d 2e 61 72 82 0f 2a 2e   oogle.com.ar..*.
+0350 - 67 6f 6f 67 6c 65 2e 63-6f 6d 2e 61 75 82 0f 2a   google.com.au..*
+0360 - 2e 67 6f 6f 67 6c 65 2e-63 6f 6d 2e 62 72 82 0f   .google.com.br..
+0370 - 2a 2e 67 6f 6f 67 6c 65-2e 63 6f 6d 2e 63 6f 82   *.google.com.co.
+0380 - 0f 2a 2e 67 6f 6f 67 6c-65 2e 63 6f 6d 2e 6d 78   .*.google.com.mx
+0390 - 82 0f 2a 2e 67 6f 6f 67-6c 65 2e 63 6f 6d 2e 74   ..*.google.com.t
+03a0 - 72 82 0f 2a 2e 67 6f 6f-67 6c 65 2e 63 6f 6d 2e   r..*.google.com.
+03b0 - 76 6e 82 0b 2a 2e 67 6f-6f 67 6c 65 2e 64 65 82   vn..*.google.de.
+03c0 - 0b 2a 2e 67 6f 6f 67 6c-65 2e 65 73 82 0b 2a 2e   .*.google.es..*.
+03d0 - 67 6f 6f 67 6c 65 2e 66-72 82 0b 2a 2e 67 6f 6f   google.fr..*.goo
+03e0 - 67 6c 65 2e 68 75 82 0b-2a 2e 67 6f 6f 67 6c 65   gle.hu..*.google
+03f0 - 2e 69 74 82 0b 2a 2e 67-6f 6f 67 6c 65 2e 6e 6c   .it..*.google.nl
+0400 - 82 0b 2a 2e 67 6f 6f 67-6c 65 2e 70 6c 82 0b 2a   ..*.google.pl..*
+0410 - 2e 67 6f 6f 67 6c 65 2e-70 74 82 12 2a 2e 67 6f   .google.pt..*.go
+0420 - 6f 67 6c 65 61 64 61 70-69 73 2e 63 6f 6d 82 0f   ogleadapis.com..
+0430 - 2a 2e 67 6f 6f 67 6c 65-61 70 69 73 2e 63 6e 82   *.googleapis.cn.
+0440 - 14 2a 2e 67 6f 6f 67 6c-65 63 6f 6d 6d 65 72 63   .*.googlecommerc
+0450 - 65 2e 63 6f 6d 82 11 2a-2e 67 6f 6f 67 6c 65 76   e.com..*.googlev
+0460 - 69 64 65 6f 2e 63 6f 6d-82 0c 2a 2e 67 73 74 61   ideo.com..*.gsta
+0470 - 74 69 63 2e 63 6e 82 0d-2a 2e 67 73 74 61 74 69   tic.cn..*.gstati
+0480 - 63 2e 63 6f 6d 82 0a 2a-2e 67 76 74 31 2e 63 6f   c.com..*.gvt1.co
+0490 - 6d 82 0a 2a 2e 67 76 74-32 2e 63 6f 6d 82 14 2a   m..*.gvt2.com..*
+04a0 - 2e 6d 65 74 72 69 63 2e-67 73 74 61 74 69 63 2e   .metric.gstatic.
+04b0 - 63 6f 6d 82 0c 2a 2e 75-72 63 68 69 6e 2e 63 6f   com..*.urchin.co
+04c0 - 6d 82 10 2a 2e 75 72 6c-2e 67 6f 6f 67 6c 65 2e   m..*.url.google.
+04d0 - 63 6f 6d 82 16 2a 2e 79-6f 75 74 75 62 65 2d 6e   com..*.youtube-n
+04e0 - 6f 63 6f 6f 6b 69 65 2e-63 6f 6d 82 0d 2a 2e 79   ocookie.com..*.y
+04f0 - 6f 75 74 75 62 65 2e 63-6f 6d 82 16 2a 2e 79 6f   outube.com..*.yo
+0500 - 75 74 75 62 65 65 64 75-63 61 74 69 6f 6e 2e 63   utubeeducation.c
+0510 - 6f 6d 82 07 2a 2e 79 74-2e 62 65 82 0b 2a 2e 79   om..*.yt.be..*.y
+0520 - 74 69 6d 67 2e 63 6f 6d-82 1a 61 6e 64 72 6f 69   timg.com..androi
+0530 - 64 2e 63 6c 69 65 6e 74-73 2e 67 6f 6f 67 6c 65   d.clients.google
+0540 - 2e 63 6f 6d 82 0b 61 6e-64 72 6f                  .com..andro
+read from 0x7ffac9c026a0 [0x7ffaca007b50] (1904 bytes => 1904 (0x770))
+0000 - 69 64 2e 63 6f 6d 82 1b-64 65 76 65 6c 6f 70 65   id.com..develope
+0010 - 72 2e 61 6e 64 72 6f 69-64 2e 67 6f 6f 67 6c 65   r.android.google
+0020 - 2e 63 6e 82 1c 64 65 76-65 6c 6f 70 65 72 73 2e   .cn..developers.
+0030 - 61 6e 64 72 6f 69 64 2e-67 6f 6f 67 6c 65 2e 63   android.google.c
+0040 - 6e 82 04 67 2e 63 6f 82-06 67 6f 6f 2e 67 6c 82   n..g.co..goo.gl.
+0050 - 14 67 6f 6f 67 6c 65 2d-61 6e 61 6c 79 74 69 63   .google-analytic
+0060 - 73 2e 63 6f 6d 82 0a 67-6f 6f 67 6c 65 2e 63 6f   s.com..google.co
+0070 - 6d 82 12 67 6f 6f 67 6c-65 63 6f 6d 6d 65 72 63   m..googlecommerc
+0080 - 65 2e 63 6f 6d 82 18 73-6f 75 72 63 65 2e 61 6e   e.com..source.an
+0090 - 64 72 6f 69 64 2e 67 6f-6f 67 6c 65 2e 63 6e 82   droid.google.cn.
+00a0 - 0a 75 72 63 68 69 6e 2e-63 6f 6d 82 0a 77 77 77   .urchin.com..www
+00b0 - 2e 67 6f 6f 2e 67 6c 82-08 79 6f 75 74 75 2e 62   .goo.gl..youtu.b
+00c0 - 65 82 0b 79 6f 75 74 75-62 65 2e 63 6f 6d 82 14   e..youtube.com..
+00d0 - 79 6f 75 74 75 62 65 65-64 75 63 61 74 69 6f 6e   youtubeeducation
+00e0 - 2e 63 6f 6d 82 05 79 74-2e 62 65 30 68 06 08 2b   .com..yt.be0h..+
+00f0 - 06 01 05 05 07 01 01 04-5c 30 5a 30 2d 06 08 2b   ........\0Z0-..+
+0100 - 06 01 05 05 07 30 02 86-21 68 74 74 70 3a 2f 2f   .....0..!http://
+0110 - 70 6b 69 2e 67 6f 6f 67-2f 67 73 72 32 2f 47 54   pki.goog/gsr2/GT
+0120 - 53 47 49 41 47 33 2e 63-72 74 30 29 06 08 2b 06   SGIAG3.crt0)..+.
+0130 - 01 05 05 07 30 01 86 1d-68 74 74 70 3a 2f 2f 6f   ....0...http://o
+0140 - 63 73 70 2e 70 6b 69 2e-67 6f 6f 67 2f 47 54 53   csp.pki.goog/GTS
+0150 - 47 49 41 47 33 30 1d 06-03 55 1d 0e 04 16 04 14   GIAG30...U......
+0160 - f4 a4 04 66 0c d9 36 f6-7e c4 1a 40 4a 1f 9a 8c   ...f..6.~..@J...
+0170 - b6 d1 36 90 30 0c 06 03-55 1d 13 01 01 ff 04 02   ..6.0...U.......
+0180 - 30 00 30 1f 06 03 55 1d-23 04 18 30 16 80 14 77   0.0...U.#..0...w
+0190 - c2 b8 50 9a 67 76 76 b1-2d c2 86 d0 83 a0 7e a6   ..P.gvv.-.....~.
+01a0 - 7e ba 4b 30 21 06 03 55-1d 20 04 1a 30 18 30 0c   ~.K0!..U. ..0.0.
+01b0 - 06 0a 2b 06 01 04 01 d6-79 02 05 03 30 08 06 06   ..+.....y...0...
+01c0 - 67 81 0c 01 02 02 30 31-06 03 55 1d 1f 04 2a 30   g.....01..U...*0
+01d0 - 28 30 26 a0 24 a0 22 86-20 68 74 74 70 3a 2f 2f   (0&.$.". http://
+01e0 - 63 72 6c 2e 70 6b 69 2e-67 6f 6f 67 2f 47 54 53   crl.pki.goog/GTS
+01f0 - 47 49 41 47 33 2e 63 72-6c 30 0d 06 09 2a 86 48   GIAG3.crl0...*.H
+0200 - 86 f7 0d 01 01 0b 05 00-03 82 01 01 00 78 da 9a   .............x..
+0210 - 45 89 0a 22 1f 34 44 d7-18 86 b6 a6 2b 8a 4e 58   E..".4D.....+.NX
+0220 - d9 48 e8 b0 f5 df 06 b0-97 c6 b2 b8 a5 d5 1f bb   .H..............
+0230 - ef 74 ae 61 35 26 bc 52-ab 4a c0 6b 47 ac e3 48   .t.a5&.R.J.kG..H
+0240 - db 2c 4a b7 93 b2 d6 5b-fe 43 db 3e 9e 36 f4 21   .,J....[.C.>.6.!
+0250 - 89 9f f9 30 93 09 f0 af-18 bd a4 ad 2e 2a 82 5b   ...0.........*.[
+0260 - 88 86 c2 a2 93 a0 94 52-10 33 12 54 be 01 ad 57   .......R.3.T...W
+0270 - 68 f6 51 3d 16 37 16 86-38 6e 03 8d 02 47 ea 97   h.Q=.7..8n...G..
+0280 - 91 9b ee e4 ea 5e 54 2b-86 b7 11 3f c7 03 c4 a5   .....^T+...?....
+0290 - de 5c ef 5b 9b 89 cd 34-e2 92 21 80 bc cf c0 6d   .\.[...4..!....m
+02a0 - af 0d 12 2e 21 66 c1 9a-87 43 77 39 ab ce ee f1   ....!f...Cw9....
+02b0 - 5a e0 d0 a7 1d f5 ff 94-5d 8b ff 95 4b 5b 1e 71   Z.......]...K[.q
+02c0 - f0 37 fd 3c 41 c5 3d 15-d4 42 4b cc 61 86 bd 00   .7.<A.=..BK.a...
+02d0 - 66 14 26 bd f2 2c 8c 21-87 b5 4d c4 9f 67 66 60   f.&..,.!..M..gf`
+02e0 - 54 fc 18 e3 3c f1 dd 1b-44 0d 91 12 3a 1c 30 fd   T...<...D...:.0.
+02f0 - 89 ab 0a 55 db 16 8a fd-1c 94 85 be b7 d9 91 f4   ...U............
+0300 - 81 b0 21 b4 22 e5 bc 10-74 77 b0 bd 65 00 04 60   ..!."...tw..e..`
+0310 - 30 82 04 5c 30 82 03 44-a0 03 02 01 02 02 0d 01   0..\0..D........
+0320 - e3 a9 30 1c fc 72 06 38-3f 9a 53 1d 30 0d 06 09   ..0..r.8?.S.0...
+0330 - 2a 86 48 86 f7 0d 01 01-0b 05 00 30 4c 31 20 30   *.H........0L1 0
+0340 - 1e 06 03 55 04 0b 13 17-47 6c 6f 62 61 6c 53 69   ...U....GlobalSi
+0350 - 67 6e 20 52 6f 6f 74 20-43 41 20 2d 20 52 32 31   gn Root CA - R21
+0360 - 13 30 11 06 03 55 04 0a-13 0a 47 6c 6f 62 61 6c   .0...U....Global
+0370 - 53 69 67 6e 31 13 30 11-06 03 55 04 03 13 0a 47   Sign1.0...U....G
+0380 - 6c 6f 62 61 6c 53 69 67-6e 30 1e 17 0d 31 37 30   lobalSign0...170
+0390 - 36 31 35 30 30 30 30 34-32 5a 17 0d 32 31 31 32   615000042Z..2112
+03a0 - 31 35 30 30 30 30 34 32-5a 30 54 31 0b 30 09 06   15000042Z0T1.0..
+03b0 - 03 55 04 06 13 02 55 53-31 1e 30 1c 06 03 55 04   .U....US1.0...U.
+03c0 - 0a 13 15 47 6f 6f 67 6c-65 20 54 72 75 73 74 20   ...Google Trust
+03d0 - 53 65 72 76 69 63 65 73-31 25 30 23 06 03 55 04   Services1%0#..U.
+03e0 - 03 13 1c 47 6f 6f 67 6c-65 20 49 6e 74 65 72 6e   ...Google Intern
+03f0 - 65 74 20 41 75 74 68 6f-72 69 74 79 20 47 33 30   et Authority G30
+0400 - 82 01 22 30 0d 06 09 2a-86 48 86 f7 0d 01 01 01   .."0...*.H......
+0410 - 05 00 03 82 01 0f 00 30-82 01 0a 02 82 01 01 00   .......0........
+0420 - ca 52 4b ea 1e ff ce 24-6b a8 da 72 18 68 d5 56   .RK....$k..r.h.V
+0430 - 5d 0e 48 5a 2d 35 09 76-5a cf a4 c8 1c b1 a9 fe   ].HZ-5.vZ.......
+0440 - 53 89 fb ad 34 ff 88 5b-9f bb e7 e8 00 01 dc 35   S...4..[.......5
+0450 - 73 75 03 ad b3 b1 b9 a4-7d 2b 26 79 ce 15 40 0a   su......}+&y..@.
+0460 - ef 51 b8 9f 32 8c 7c 70-86 52 4b 16 fe 6a 27 6b   .Q..2.|p.RK..j'k
+0470 - e6 36 7a 62 50 d8 df 9a-89 cc 09 29 eb 4f 29 14   .6zbP......).O).
+0480 - 88 80 0b 8f 38 1e 80 6a-18 7c 1d bd 97 3b 78 7d   ....8..j.|...;x}
+0490 - 45 49 36 4f 41 cd a2 e0-76 57 3c 68 31 79 64 c9   EI6OA...vW<h1yd.
+04a0 - 6e d7 51 1e 66 c3 a2 64-2c 79 c0 e7 65 c3 56 84   n.Q.f..d,y..e.V.
+04b0 - 53 5a 43 6d cb 9a 02 20-d2 ef 1a 69 d1 b0 9d 73   SZCm... ...i...s
+04c0 - a2 e0 2a 60 65 50 31 cf-fb b3 2f bf 11 88 40 2e   ..*`eP1.../...@.
+04d0 - b5 49 10 0f 0a 6e dc 97-fa bf 2c 9f 05 39 0b 58   .I...n....,..9.X
+04e0 - 54 af 06 96 e8 c5 8e 01-16 bc a8 1a 4d 41 c5 93   T...........MA..
+04f0 - 91 a2 1e a1 8b f2 fe c1-88 24 49 a3 47 4b c5 13   .........$I.GK..
+0500 - 01 dd a7 57 12 69 62 2b-eb fe 20 ef 69 fb 3a a5   ...W.ib+.. .i.:.
+0510 - f0 7e 29 ee ed 96 16 f7-b1 1f a0 e4 90 25 e0 33   .~)..........%.3
+0520 - 02 03 01 00 01 a3 82 01-33 30 82 01 2f 30 0e 06   ........30../0..
+0530 - 03 55 1d 0f 01 01 ff 04-04 03 02 01 86 30 1d 06   .U...........0..
+0540 - 03 55 1d 25 04 16 30 14-06 08 2b 06 01 05 05 07   .U.%..0...+.....
+0550 - 03 01 06 08 2b 06 01 05-05 07 03 02 30 12 06 03   ....+.......0...
+0560 - 55 1d 13 01 01 ff 04 08-30 06 01 01 ff 02 01 00   U.......0.......
+0570 - 30 1d 06 03 55 1d 0e 04-16 04 14 77 c2 b8 50 9a   0...U......w..P.
+0580 - 67 76 76 b1 2d c2 86 d0-83 a0 7e a6 7e ba 4b 30   gvv.-.....~.~.K0
+0590 - 1f 06 03 55 1d 23 04 18-30 16 80 14 9b e2 07 57   ...U.#..0......W
+05a0 - 67 1c 1e c0 6a 06 de 59-b4 9a 2d df dc 19 86 2e   g...j..Y..-.....
+05b0 - 30 35 06 08 2b 06 01 05-05 07 01 01 04 29 30 27   05..+........)0'
+05c0 - 30 25 06 08 2b 06 01 05-05 07 30 01 86 19 68 74   0%..+.....0...ht
+05d0 - 74 70 3a 2f 2f 6f 63 73-70 2e 70 6b 69 2e 67 6f   tp://ocsp.pki.go
+05e0 - 6f 67 2f 67 73 72 32 30-32 06 03 55 1d 1f 04 2b   og/gsr202..U...+
+05f0 - 30 29 30 27 a0 25 a0 23-86 21 68 74 74 70 3a 2f   0)0'.%.#.!http:/
+0600 - 2f 63 72 6c 2e 70 6b 69-2e 67 6f 6f 67 2f 67 73   /crl.pki.goog/gs
+0610 - 72 32 2f 67 73 72 32 2e-63 72 6c 30 3f 06 03 55   r2/gsr2.crl0?..U
+0620 - 1d 20 04 38 30 36 30 34-06 06 67 81 0c 01 02 02   . .80604..g.....
+0630 - 30 2a 30 28 06 08 2b 06-01 05 05 07 02 01 16 1c   0*0(..+.........
+0640 - 68 74 74 70 73 3a 2f 2f-70 6b 69 2e 67 6f 6f 67   https://pki.goog
+0650 - 2f 72 65 70 6f 73 69 74-6f 72 79 2f 30 0d 06 09   /repository/0...
+0660 - 2a 86 48 86 f7 0d 01 01-0b 05 00 03 82 01 01 00   *.H.............
+0670 - 1c b7 89 96 e4 53 ed bb-ec db a8 32 01 9f 2c a3   .....S.....2..,.
+0680 - cd 6d ad 42 12 77 b3 b8-e6 c9 03 52 60 20 7b 57   .m.B.w.....R` {W
+0690 - 27 c6 11 b5 3f 67 0d 99-2c 5b 5a ca 22 0a dd 9e   '...?g..,[Z."...
+06a0 - bb 1f 4b 48 3f 8f 02 3d-8b 21 84 45 1d 6d f5 ff   ..KH?..=.!.E.m..
+06b0 - ac 68 89 cd 64 e2 d6 d6-5e 40 c2 8e 2a f7 ef 14   .h..d...^@..*...
+06c0 - d3 36 a4 40 30 f5 32 15-15 92 76 fb 7e 9e 53 ea   .6.@0.2...v.~.S.
+06d0 - c2 76 fc 39 ad 88 fe 66-92 26 e9 1c c4 38 cd 49   .v.9...f.&...8.I
+06e0 - fa 43 87 f0 5d d6 56 4d-81 d7 7f f1 c2 dd b0 4d   .C..].VM.......M
+06f0 - fe c3 2a 6e 7c 9f 6e 5c-ed 62 42 99 e1 f7 36 ee   ..*n|.n\.bB...6.
+0700 - 14 8c 2c 20 e3 46 97 5a-77 03 c0 a0 c6 4a 88 fd   .., .F.Zw....J..
+0710 - 40 22 87 72 5a 18 ea 9c-a5 c7 5a 08 8c e4 05 a4   @".rZ.....Z.....
+0720 - 7d b9 84 35 5f 89 36 56-0e 40 3d 12 e8 bb 35 72   }..5_.6V.@=...5r
+0730 - ed af 08 56 4e b0 bb 2e-a9 9b e4 fb 1d 3e 0b 63   ...VN........>.c
+0740 - c8 9b 4b 91 44 66 57 c0-14 b4 96 f0 dc 2c 57 3f   ..K.DfW......,W?
+0750 - 52 04 ad 95 aa 7d 4d d0-f2 0c 9f 9c 40 e8 d6 55   R....}M.....@..U
+0760 - 73 ba 3c df 90 cb 00 5b-21 11 67 c2 ed 32 1e de   s.<....[!.g..2..
+depth=1 /C=US/O=Google Trust Services/CN=Google Internet Authority G3
+verify error:num=20:unable to get local issuer certificate
+verify return:0
+SSL_connect:SSLv3 read server certificate A
+read from 0x7ffac9c026a0 [0x7ffaca007600] (5 bytes => 5 (0x5))
+0000 - 16 03 01 00 04                                    .....
+read from 0x7ffac9c026a0 [0x7ffaca007605] (4 bytes => 4 (0x4))
+0000 - 0e                                                .
+0004 - <SPACES/NULS>
+SSL_connect:SSLv3 read server done A
+write to 0x7ffac9c026a0 [0x7ffaca011a00] (267 bytes => 267 (0x10B))
+0000 - 16 03 01 01 06 10 00 01-02 01 00 6b 3f b8 82 1b   ...........k?...
+0010 - cf 01 6c f9 3e 27 10 fd-d2 ff 8b 36 5b ca 59 2d   ..l.>'.....6[.Y-
+0020 - a8 78 9d 0d 4d e6 58 ec-0f bb 51 40 d2 8e 60 4f   .x..M.X...Q@..`O
+0030 - 5b 65 fe f2 81 47 6c 52-fe c1 f9 5f 75 d9 a2 02   [e...GlR..._u...
+0040 - 03 04 2b c7 16 e3 58 af-2e 05 d8 ca ee 81 ea 6b   ..+...X........k
+0050 - 3a d8 ea 81 f8 a2 f7 fa-61 92 4f 00 4f 6d 60 70   :.......a.O.Om`p
+0060 - 16 df c6 f2 49 91 17 a7-d1 6e 7a a0 38 66 36 c0   ....I....nz.8f6.
+0070 - f2 2e 0f df d1 99 90 ea-1e 49 39 a5 eb 12 95 e5   .........I9.....
+0080 - e1 bb 13 ba ef 45 59 1f-8f ac df f0 04 b2 e3 de   .....EY.........
+0090 - 44 20 d2 92 69 72 3e ac-f6 24 46 8d 96 c2 0b 7c   D ..ir>..$F....|
+00a0 - 4f c5 5a 6e 8e b0 cf 19-e5 46 b5 fa 49 64 a5 f6   O.Zn.....F..Id..
+00b0 - c6 3c 88 cf 13 52 41 cb-38 f2 0c 23 b8 28 ac cc   .<...RA.8..#.(..
+00c0 - 76 7f b4 ed a4 4f ea 3c-4b 50 e1 e9 16 31 2c 4f   v....O.<KP...1,O
+00d0 - f4 2e 7f df 4c c6 ba 6f-ca 6f 8e 17 1a fb c3 35   ....L..o.o.....5
+00e0 - c0 20 9f 0f 79 02 f7 ea-e8 5a 10 03 59 58 e6 78   . ..y....Z..YX.x
+00f0 - 51 78 31 90 33 6b 28 0f-2c 57 e0 b1 20 90 09 ac   Qx1.3k(.,W.. ...
+0100 - 85 93 5f 62 14 15 ca 98-cb 40 6e                  .._b.....@n
+SSL_connect:SSLv3 write client key exchange A
+write to 0x7ffac9c026a0 [0x7ffaca011a00] (6 bytes => 6 (0x6))
+0000 - 14 03 01 00 01 01                                 ......
+SSL_connect:SSLv3 write change cipher spec A
+write to 0x7ffac9c026a0 [0x7ffaca011a00] (53 bytes => 53 (0x35))
+0000 - 16 03 01 00 30 d7 76 f4-a7 6d 75 c0 b0 20 5c 19   ....0.v..mu.. \.
+0010 - 9f 7b 2d 4f 6f f0 d0 3f-f1 5f b8 70 0e cf ce 26   .{-Oo..?._.p...&
+0020 - e7 56 45 ab c7 17 f2 dd-35 55 53 88 56 51 5d 81   .VE.....5US.VQ].
+0030 - 04 e4 70 f3 bd                                    ..p..
+SSL_connect:SSLv3 write finished A
+SSL_connect:SSLv3 flush data
+read from 0x7ffac9c026a0 [0x7ffaca007600] (5 bytes => -1 (0xFFFFFFFFFFFFFFFF))
+SSL_connect:error in SSLv3 read server session ticket A
+read R BLOCK
+read from 0x7ffac9c026a0 [0x7ffaca007600] (5 bytes => 5 (0x5))
+0000 - 16 03 01 00 da                                    .....
+read from 0x7ffac9c026a0 [0x7ffaca007605] (218 bytes => 218 (0xDA))
+0000 - 04 00 00 d6 00 01 89 c0-00 d0 00 b7 79 da 9f 09   ............y...
+0010 - e4 91 19 6e 45 34 88 69-c8 93 a4 77 b3 c6 7b 54   ...nE4.i...w..{T
+0020 - a9 f7 11 c0 7b 5b ec 2e-5e ac af 39 fe 46 6e d3   ....{[..^..9.Fn.
+0030 - b0 04 9d ed 79 63 67 3a-48 4c 85 50 ea e7 20 59   ....ycg:HL.P.. Y
+0040 - 5a 91 dd b0 b1 6b 74 7b-1f db dd cc ae d8 e1 f1   Z....kt{........
+0050 - 8e 03 86 e8 36 53 59 e3-0a 9e 5a ba e7 d5 d9 28   ....6SY...Z....(
+0060 - bf 5b dd 2c c2 87 51 3c-55 c5 4c 37 46 51 c4 36   .[.,..Q<U.L7FQ.6
+0070 - 7a ab bc be 36 22 45 69-11 39 09 11 7a 69 90 b0   z...6"Ei.9..zi..
+0080 - 6d ed ea ca 65 c4 5e 54-dd ac 90 fc e3 61 a9 b5   m...e.^T.....a..
+0090 - ec 61 a2 1a 3e 44 0b 0a-2a 39 90 b2 2a 46 02 ac   .a..>D..*9..*F..
+00a0 - db ba b4 a6 52 fe 4e 18-dd 40 8e 7e 02 4f bf d1   ....R.N..@.~.O..
+00b0 - ff 13 30 8a 7a 88 03 6a-83 02 b3 a5 a1 f2 f1 da   ..0.z..j........
+00c0 - e5 f7 ac 24 46 a0 d0 20-84 89 67 1a 0b 18 e0 f1   ...$F.. ..g.....
+00d0 - 94 c9 04 65 57 bb 7c a4-27 bf                     ...eW.|.'.
+SSL_connect:SSLv3 read server session ticket A
+read from 0x7ffac9c026a0 [0x7ffaca007600] (5 bytes => 5 (0x5))
+0000 - 14 03 01 00 01                                    .....
+read from 0x7ffac9c026a0 [0x7ffaca007605] (1 bytes => 1 (0x1))
+0000 - 01                                                .
+read from 0x7ffac9c026a0 [0x7ffaca007600] (5 bytes => 5 (0x5))
+0000 - 16 03 01 00 30                                    ....0
+read from 0x7ffac9c026a0 [0x7ffaca007605] (48 bytes => 48 (0x30))
+0000 - 06 43 17 cb 1c b8 48 0e-d4 2a 17 73 7f a4 28 36   .C....H..*.s..(6
+0010 - eb 2a 9f bd 15 aa 11 61-c0 1d 93 a2 2c 31 3f 4c   .*.....a....,1?L
+0020 - 97 cd 88 d1 a9 64 3a 03-6f d1 f6 c2 7e 23 b9 a4   .....d:.o...~#..
+SSL_connect:SSLv3 read finished A
+read from 0x7ffac9c026a0 [0x7ffaca007600] (5 bytes => -1 (0xFFFFFFFFFFFFFFFF))
+read R BLOCK
+---
+Certificate chain
+ 0 s:/C=US/ST=California/L=Mountain View/O=Google LLC/CN=*.google.com
+   i:/C=US/O=Google Trust Services/CN=Google Internet Authority G3
+-----BEGIN CERTIFICATE-----
+MIIISjCCBzKgAwIBAgIIDam8LlocsTIwDQYJKoZIhvcNAQELBQAwVDELMAkGA1UE
+BhMCVVMxHjAcBgNVBAoTFUdvb2dsZSBUcnVzdCBTZXJ2aWNlczElMCMGA1UEAxMc
+R29vZ2xlIEludGVybmV0IEF1dGhvcml0eSBHMzAeFw0xODA0MjQxMDA0NTlaFw0x
+ODA3MTcwOTI2MDBaMGYxCzAJBgNVBAYTAlVTMRMwEQYDVQQIDApDYWxpZm9ybmlh
+MRYwFAYDVQQHDA1Nb3VudGFpbiBWaWV3MRMwEQYDVQQKDApHb29nbGUgTExDMRUw
+EwYDVQQDDAwqLmdvb2dsZS5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEK
+AoIBAQCl4ePxEQY35dpf5ElGqnC2Szl+awKKAKCYdZPx6OiWkveSU012HG0o3mJt
+Wrehm+iVQHH63wMIQUK3GDQviOG1VIlk/mr0e7TgEj6ibihHJLVqFfLIEx7U1WPv
+FLCivGm7i3wxeKDGDubwHFYvebGEaLlJp1mLTRh8okzCb8/0HudCQK6nuqCfAiPD
+Lu+S0lSgIzFbtV6hTJEFuoYz/7L5OdgWEV7YB1huxeTq49nLmBltG/LbVl0GM7J3
+Q0xAKU1yQrMAmbKjI31G492gkKugdcxWI7ftp+PBu7GOOf9uSAjQIzAomsfQ9JSl
+unvNMt50LESU+ljCIZKAAU25yvqdAgMBAAGjggUMMIIFCDATBgNVHSUEDDAKBggr
+BgEFBQcDATCCA+EGA1UdEQSCA9gwggPUggwqLmdvb2dsZS5jb22CDSouYW5kcm9p
+ZC5jb22CFiouYXBwZW5naW5lLmdvb2dsZS5jb22CEiouY2xvdWQuZ29vZ2xlLmNv
+bYIUKi5kYjgzMzk1My5nb29nbGUuY26CBiouZy5jb4IOKi5nY3AuZ3Z0Mi5jb22C
+FiouZ29vZ2xlLWFuYWx5dGljcy5jb22CCyouZ29vZ2xlLmNhggsqLmdvb2dsZS5j
+bIIOKi5nb29nbGUuY28uaW6CDiouZ29vZ2xlLmNvLmpwgg4qLmdvb2dsZS5jby51
+a4IPKi5nb29nbGUuY29tLmFygg8qLmdvb2dsZS5jb20uYXWCDyouZ29vZ2xlLmNv
+bS5icoIPKi5nb29nbGUuY29tLmNvgg8qLmdvb2dsZS5jb20ubXiCDyouZ29vZ2xl
+LmNvbS50coIPKi5nb29nbGUuY29tLnZuggsqLmdvb2dsZS5kZYILKi5nb29nbGUu
+ZXOCCyouZ29vZ2xlLmZyggsqLmdvb2dsZS5odYILKi5nb29nbGUuaXSCCyouZ29v
+Z2xlLm5sggsqLmdvb2dsZS5wbIILKi5nb29nbGUucHSCEiouZ29vZ2xlYWRhcGlz
+LmNvbYIPKi5nb29nbGVhcGlzLmNughQqLmdvb2dsZWNvbW1lcmNlLmNvbYIRKi5n
+b29nbGV2aWRlby5jb22CDCouZ3N0YXRpYy5jboINKi5nc3RhdGljLmNvbYIKKi5n
+dnQxLmNvbYIKKi5ndnQyLmNvbYIUKi5tZXRyaWMuZ3N0YXRpYy5jb22CDCoudXJj
+aGluLmNvbYIQKi51cmwuZ29vZ2xlLmNvbYIWKi55b3V0dWJlLW5vY29va2llLmNv
+bYINKi55b3V0dWJlLmNvbYIWKi55b3V0dWJlZWR1Y2F0aW9uLmNvbYIHKi55dC5i
+ZYILKi55dGltZy5jb22CGmFuZHJvaWQuY2xpZW50cy5nb29nbGUuY29tggthbmRy
+b2lkLmNvbYIbZGV2ZWxvcGVyLmFuZHJvaWQuZ29vZ2xlLmNughxkZXZlbG9wZXJz
+LmFuZHJvaWQuZ29vZ2xlLmNuggRnLmNvggZnb28uZ2yCFGdvb2dsZS1hbmFseXRp
+Y3MuY29tggpnb29nbGUuY29tghJnb29nbGVjb21tZXJjZS5jb22CGHNvdXJjZS5h
+bmRyb2lkLmdvb2dsZS5jboIKdXJjaGluLmNvbYIKd3d3Lmdvby5nbIIIeW91dHUu
+YmWCC3lvdXR1YmUuY29tghR5b3V0dWJlZWR1Y2F0aW9uLmNvbYIFeXQuYmUwaAYI
+KwYBBQUHAQEEXDBaMC0GCCsGAQUFBzAChiFodHRwOi8vcGtpLmdvb2cvZ3NyMi9H
+VFNHSUFHMy5jcnQwKQYIKwYBBQUHMAGGHWh0dHA6Ly9vY3NwLnBraS5nb29nL0dU
+U0dJQUczMB0GA1UdDgQWBBT0pARmDNk29n7EGkBKH5qMttE2kDAMBgNVHRMBAf8E
+AjAAMB8GA1UdIwQYMBaAFHfCuFCaZ3Z2sS3ChtCDoH6mfrpLMCEGA1UdIAQaMBgw
+DAYKKwYBBAHWeQIFAzAIBgZngQwBAgIwMQYDVR0fBCowKDAmoCSgIoYgaHR0cDov
+L2NybC5wa2kuZ29vZy9HVFNHSUFHMy5jcmwwDQYJKoZIhvcNAQELBQADggEBAHja
+mkWJCiIfNETXGIa2piuKTljZSOiw9d8GsJfGsril1R+773SuYTUmvFKrSsBrR6zj
+SNssSreTstZb/kPbPp429CGJn/kwkwnwrxi9pK0uKoJbiIbCopOglFIQMxJUvgGt
+V2j2UT0WNxaGOG4DjQJH6peRm+7k6l5UK4a3ET/HA8Sl3lzvW5uJzTTikiGAvM/A
+ba8NEi4hZsGah0N3OavO7vFa4NCnHfX/lF2L/5VLWx5x8Df9PEHFPRXUQkvMYYa9
+AGYUJr3yLIwhh7VNxJ9nZmBU/BjjPPHdG0QNkRI6HDD9iasKVdsWiv0clIW+t9mR
+9IGwIbQi5bwQdHewvWU=
+-----END CERTIFICATE-----
+ 1 s:/C=US/O=Google Trust Services/CN=Google Internet Authority G3
+   i:/OU=GlobalSign Root CA - R2/O=GlobalSign/CN=GlobalSign
+-----BEGIN CERTIFICATE-----
+MIIEXDCCA0SgAwIBAgINAeOpMBz8cgY4P5pTHTANBgkqhkiG9w0BAQsFADBMMSAw
+HgYDVQQLExdHbG9iYWxTaWduIFJvb3QgQ0EgLSBSMjETMBEGA1UEChMKR2xvYmFs
+U2lnbjETMBEGA1UEAxMKR2xvYmFsU2lnbjAeFw0xNzA2MTUwMDAwNDJaFw0yMTEy
+MTUwMDAwNDJaMFQxCzAJBgNVBAYTAlVTMR4wHAYDVQQKExVHb29nbGUgVHJ1c3Qg
+U2VydmljZXMxJTAjBgNVBAMTHEdvb2dsZSBJbnRlcm5ldCBBdXRob3JpdHkgRzMw
+ggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDKUkvqHv/OJGuo2nIYaNVW
+XQ5IWi01CXZaz6TIHLGp/lOJ+600/4hbn7vn6AAB3DVzdQOts7G5pH0rJnnOFUAK
+71G4nzKMfHCGUksW/mona+Y2emJQ2N+aicwJKetPKRSIgAuPOB6Aahh8Hb2XO3h9
+RUk2T0HNouB2VzxoMXlkyW7XUR5mw6JkLHnA52XDVoRTWkNty5oCINLvGmnRsJ1z
+ouAqYGVQMc/7sy+/EYhALrVJEA8KbtyX+r8snwU5C1hUrwaW6MWOARa8qBpNQcWT
+kaIeoYvy/sGIJEmjR0vFEwHdp1cSaWIr6/4g72n7OqXwfinu7ZYW97EfoOSQJeAz
+AgMBAAGjggEzMIIBLzAOBgNVHQ8BAf8EBAMCAYYwHQYDVR0lBBYwFAYIKwYBBQUH
+AwEGCCsGAQUFBwMCMBIGA1UdEwEB/wQIMAYBAf8CAQAwHQYDVR0OBBYEFHfCuFCa
+Z3Z2sS3ChtCDoH6mfrpLMB8GA1UdIwQYMBaAFJviB1dnHB7AagbeWbSaLd/cGYYu
+MDUGCCsGAQUFBwEBBCkwJzAlBggrBgEFBQcwAYYZaHR0cDovL29jc3AucGtpLmdv
+b2cvZ3NyMjAyBgNVHR8EKzApMCegJaAjhiFodHRwOi8vY3JsLnBraS5nb29nL2dz
+cjIvZ3NyMi5jcmwwPwYDVR0gBDgwNjA0BgZngQwBAgIwKjAoBggrBgEFBQcCARYc
+aHR0cHM6Ly9wa2kuZ29vZy9yZXBvc2l0b3J5LzANBgkqhkiG9w0BAQsFAAOCAQEA
+HLeJluRT7bvs26gyAZ8so81trUISd7O45skDUmAge1cnxhG1P2cNmSxbWsoiCt2e
+ux9LSD+PAj2LIYRFHW31/6xoic1k4tbWXkDCjir37xTTNqRAMPUyFRWSdvt+nlPq
+wnb8Oa2I/maSJukcxDjNSfpDh/Bd1lZNgdd/8cLdsE3+wypufJ9uXO1iQpnh9zbu
+FIwsIONGl1p3A8CgxkqI/UAih3JaGOqcpcdaCIzkBaR9uYQ1X4k2Vg5APRLouzVy
+7a8IVk6wuy6pm+T7HT4LY8ibS5FEZlfAFLSW8NwsVz9SBK2Vqn1N0PIMn5xA6NZV
+c7o835DLAFshEWfC7TIe3g==
+-----END CERTIFICATE-----
+---
+Server certificate
+subject=/C=US/ST=California/L=Mountain View/O=Google LLC/CN=*.google.com
+issuer=/C=US/O=Google Trust Services/CN=Google Internet Authority G3
+---
+No client certificate CA names sent
+---
+SSL handshake has read 3613 bytes and written 426 bytes
+---
+New, TLSv1/SSLv3, Cipher is AES128-SHA
+Server public key is 2048 bit
+Secure Renegotiation IS supported
+Compression: NONE
+Expansion: NONE
+SSL-Session:
+    Protocol  : TLSv1
+    Cipher    : AES128-SHA
+    Session-ID: DD35F4528C24400D8BD10687F397505707329B2B64BD04699281D8ACC19AEBE3
+    Session-ID-ctx:
+    Master-Key: 223E14FAD60A057F0987D146D0735D07E27F8F63E5CDFC83AD99F502B3F2A12052785702954DEA6D4D5A4D208BFBC4DB
+    Key-Arg   : None
+    TLS session ticket lifetime hint: 100800 (seconds)
+    TLS session ticket:
+    0000 - 00 b7 79 da 9f 09 e4 91-19 6e 45 34 88 69 c8 93   ..y......nE4.i..
+    0010 - a4 77 b3 c6 7b 54 a9 f7-11 c0 7b 5b ec 2e 5e ac   .w..{T....{[..^.
+    0020 - af 39 fe 46 6e d3 b0 04-9d ed 79 63 67 3a 48 4c   .9.Fn.....ycg:HL
+    0030 - 85 50 ea e7 20 59 5a 91-dd b0 b1 6b 74 7b 1f db   .P.. YZ....kt{..
+    0040 - dd cc ae d8 e1 f1 8e 03-86 e8 36 53 59 e3 0a 9e   ..........6SY...
+    0050 - 5a ba e7 d5 d9 28 bf 5b-dd 2c c2 87 51 3c 55 c5   Z....(.[.,..Q<U.
+    0060 - 4c 37 46 51 c4 36 7a ab-bc be 36 22 45 69 11 39   L7FQ.6z...6"Ei.9
+    0070 - 09 11 7a 69 90 b0 6d ed-ea ca 65 c4 5e 54 dd ac   ..zi..m...e.^T..
+    0080 - 90 fc e3 61 a9 b5 ec 61-a2 1a 3e 44 0b 0a 2a 39   ...a...a..>D..*9
+    0090 - 90 b2 2a 46 02 ac db ba-b4 a6 52 fe 4e 18 dd 40   ..*F......R.N..@
+    00a0 - 8e 7e 02 4f bf d1 ff 13-30 8a 7a 88 03 6a 83 02   .~.O....0.z..j..
+    00b0 - b3 a5 a1 f2 f1 da e5 f7-ac 24 46 a0 d0 20 84 89   .........$F.. ..
+    00c0 - 67 1a 0b 18 e0 f1 94 c9-04 65 57 bb 7c a4 27 bf   g........eW.|.'.
+
+    Start Time: 1526136269
+    Timeout   : 7200 (sec)
+    Verify return code: 0 (ok)
+---
+read from 0x7ffac9c026a0 [0x7ffaca007600] (5 bytes => 0 (0x0))
+read:errno=0
+write to 0x7ffac9c026a0 [0x7ffaca00c000] (37 bytes => 37 (0x25))
+0000 - 15 03 01 00 20 1c 70 55-71 bf a5 e5 13 46 65 b0   .... .pUq....Fe.
+0010 - c3 24 3f 97 6a 9a fd 1b-45 34 90 e3 fe 5d af 94   .$?.j...E4...]..
+0020 - cb 2c 75 8d fe                                    .,u..
+SSL3 alert write:warning:close notify
